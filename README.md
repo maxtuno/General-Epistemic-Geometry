@@ -10,6 +10,8 @@
 
 [Foundational Papers](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
 
+[General Epistemic Geometry](https://www.academia.edu/164594131/General_Epistemic_Geometry)
+
 ---
 
 ## Overview
