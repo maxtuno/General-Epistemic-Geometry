@@ -53,14 +53,14 @@ A finite probe mechanism that approximates semantic regions using disjoint boxes
 
 A quantitative invariant measuring the minimal distortion between semantic content and its finite representation:
 
-[
+$$
 \kappa(o) = \inf_{s \in \mathcal{S}_o} \mathrm{Err}(s,o)
-]
+$$
 
 Interpretation:
 
-* (\kappa = 0): exact representation achievable
-* (\kappa > 0): irreducible distortion (structural obstruction)
+* $\kappa = 0$: exact representation achievable
+* $\kappa > 0$: irreducible distortion (structural obstruction)
 
 This converts incompleteness into geometry.
 
@@ -72,13 +72,13 @@ A refinement principle ensuring that representational sequences converge optimal
 
 Hardness results (e.g., DSOP exact minimization) are reinterpreted as positive curvature in the epistemic metric space. Exponential fragmentation becomes geometric obstruction.
 
-[
+$$
 \text{Exponential DSOP} \implies \kappa > 0
-]
+$$
 
 ### 6. Differential Lifting & Sobolev Regularity
 
-For PDE-governed domains (e.g., General Relativity), certification requires Sobolev regularity (s > 5/2). The expansion functional for trapped surfaces is proven continuous under this topology, enabling:
+For PDE-governed domains (e.g., General Relativity), certification requires Sobolev regularity $s > 5/2$. The expansion functional for trapped surfaces is proven continuous under this topology, enabling:
 
 * Certified trapped-surface detection
 * Explicit gray zones as open-interface regions
@@ -87,9 +87,9 @@ For PDE-governed domains (e.g., General Relativity), certification requires Sobo
 
 When decision boundaries are non-open (e.g., exact null expansion), strict margins induce a structured interface:
 
-[
+$$
 \mathcal{G} = \Theta \setminus (\mathcal{A} \cup \mathcal{N})
-]
+$$
 
 Gray zones are not failures; they are operationally inevitable under finite probes.
 
