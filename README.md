@@ -6,6 +6,7 @@ Foundational research monograph and companion papers by **Oscar Riveros**.
 ## Quick Links
 
 - Canonical monograph PDF (root): [General_Epistemic_Geometry_Book.pdf](./General_Epistemic_Geometry_Book.pdf)
+- Finite-Bank certification paper (root): [Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf](<./Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf>)
 - Epistemic Geometry of Closure PDF (root): [Epistemic_Geometry_of_Closure - Riveros.pdf](<./Epistemic_Geometry_of_Closure - Riveros.pdf>)
 - Foundational Papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
 - Academia pages:
@@ -38,6 +39,7 @@ This repository keeps canonical PDFs in the repository root and reproducible scr
 |   `-- toy_boundary_error.csv
 |-- figures/                       # generated outputs (created automatically)
 |-- General_Epistemic_Geometry_Book.pdf
+|-- Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf
 |-- Epistemic_Geometry_of_Closure - Riveros.pdf
 `-- README.md
 ```
@@ -151,6 +153,7 @@ Editorial principle:
 For February 2026 references, cite the canonical root PDFs.
 
 - Primary canonical monograph: `General_Epistemic_Geometry_Book.pdf`
+- Primary finite-bank paper: `Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf`
 - Companion closure paper: `Epistemic_Geometry_of_Closure - Riveros.pdf`
 
 Minimal BibTeX:
@@ -172,6 +175,15 @@ Minimal BibTeX:
   month        = feb,
   note         = {SCE-IM, Coherent Flow, Stability, and Operational Completeness},
   howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Epistemic_Geometry_of_Closure%20-%20Riveros.pdf}}
+}
+
+@misc{riveros2026finitebank,
+  author       = {Riveros, Oscar},
+  title        = {Finite-Bank Certification in Epistemic Geometry},
+  year         = {2026},
+  month        = feb,
+  note         = {Canonical root PDF},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Finite-Bank_Certification_in_Epistemic_Geometry%20-%20Riveros.pdf}}
 }
 ```
 
