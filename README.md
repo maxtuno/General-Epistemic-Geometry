@@ -1,248 +1,180 @@
 # General Epistemic Geometry
 
-**Author:** Oscar Riveros
+Foundational research monograph and companion papers by **Oscar Riveros**.  
+**Canonical final edition:** February 2026.
 
-**Version:** Canonical Final Edition (February 2026)
+## Quick Links
 
-**Status:** Research Monograph / Foundational Treatise
+- Canonical monograph PDF (root): [General_Epistemic_Geometry_Book.pdf](./General_Epistemic_Geometry_Book.pdf)
+- Epistemic Geometry of Closure PDF (root): [Epistemic_Geometry_of_Closure - Riveros.pdf](<./Epistemic_Geometry_of_Closure - Riveros.pdf>)
+- Foundational Papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
+- Academia pages:
+  - [General Epistemic Geometry](https://www.academia.edu/164594131/General_Epistemic_Geometry)
+  - [Epistemic Geometry of Closure](https://www.academia.edu/164640745/Epistemic_Geometry_of_Closure_SCE_IM_Coherent_Flow_Stability_and_Operational_Completeness)
 
-**License:** All rights reserved.
+## Table of Contents
 
-[Foundational Papers](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
+- [Repository Layout](#repository-layout)
+- [Quickstart (Reproduce)](#quickstart-reproduce)
+- [Script CLI](#script-cli)
+- [Data](#data)
+- [Outputs](#outputs)
+- [Scholarly Description](#scholarly-description)
+- [How to Cite](#how-to-cite)
+- [License](#license)
 
-[General Epistemic Geometry](https://www.academia.edu/164594131/General_Epistemic_Geometry)
+## Repository Layout
 
-[Epistemic Geometry of Closure](https://www.academia.edu/164640745/Epistemic_Geometry_of_Closure_SCE_IM_Coherent_Flow_Stability_and_Operational_Completeness)
+This repository keeps canonical PDFs in the repository root and reproducible scripts/data in dedicated folders.
 
----
+```text
+.
+|-- code/
+|   |-- generate_figures.py
+|   |-- mercury_perihelion.py
+|   `-- requirements.txt
+|-- data/
+|   |-- jaramillo_lousto_table1.csv
+|   `-- toy_boundary_error.csv
+|-- figures/                       # generated outputs (created automatically)
+|-- General_Epistemic_Geometry_Book.pdf
+|-- Epistemic_Geometry_of_Closure - Riveros.pdf
+`-- README.md
+```
 
-## Overview
+## Quickstart (Reproduce)
 
-*General Epistemic Geometry* is a formal treatise proposing a unified geometric framework for the representation, compilation, verification, and limitation of scientific knowledge under finite resources.
+Run from repository root.
 
-The central thesis is that the gap between syntax and semantics is not merely logical but geometric, and that this gap can be measured, bounded, and certified. The framework introduces **epistemic curvature** as a quantitative invariant capturing irreducible representational distortion under finite compilation.
+### Linux / macOS
 
-The work integrates:
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r code/requirements.txt
+python code/generate_figures.py
+python code/mercury_perihelion.py
+```
 
-* Continuous logic and forbidden-region semantics
-* Geometric knowledge compilation
-* Complexity-theoretic obstruction results
-* Differential lifting and Sobolev regularity
-* Certified interfaces (“gray zones”) under operational constraints
-* Applications to relativistic black hole detection
-* Coherent flows across theory spaces
-* Topological robustness (braids, knots, configuration spaces)
+### Windows (PowerShell)
 
-This is not a survey paper. It is a foundational construction.
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r code/requirements.txt
+python code/generate_figures.py
+python code/mercury_perihelion.py
+```
 
----
+## Script CLI
 
-## Core Contributions
+### `python code/generate_figures.py --help`
 
-### 1. Continuous Geometric CNF (cGCNF)
+- `--data-dir`: directory with CSV inputs (default: `data/`)
+- `--input`: optional explicit main CSV path (default: `data/jaramillo_lousto_table1.csv`)
+- `--boundary-error`: optional explicit boundary-error CSV path (default: `data/toy_boundary_error.csv`)
+- `--out-dir`: output directory for figures (default: `figures/`)
+- `--seed`: random seed for toy Monte Carlo
+- `--mc`: number of Monte Carlo samples
 
-A continuous semantic model where formulas define **closed forbidden regions** in parameter space. Models are points outside the union of these regions. Stability and robustness are treated topologically, not combinatorially.
+Example:
 
-### 2. Geometric Compilation (AddBox / AddCube)
+```bash
+python code/generate_figures.py --data-dir data --out-dir figures --seed 0
+```
 
-A finite probe mechanism that approximates semantic regions using disjoint boxes or cubes, enabling:
+### `python code/mercury_perihelion.py --help`
 
-* Auditability
-* Operational certification
-* Explicit resource tracking
+- `--out-dir`: directory for output text file (default: `figures/`)
+- `--output`: optional explicit output file path
+- `--seed`: accepted for CLI consistency; the calculation is deterministic
 
-### 3. Epistemic Curvature
+Example:
 
-A quantitative invariant measuring the minimal distortion between semantic content and its finite representation:
+```bash
+python code/mercury_perihelion.py --out-dir figures
+```
+
+## Data
+
+- `data/jaramillo_lousto_table1.csv`:
+  - Critical separation table (`q_M2_over_M1`, `d_crit`, `d_crit_over_Mtot`).
+  - Used by `code/generate_figures.py` for `fig_dcrit_vs_q.png` and interpolation in the toy gray-zone model.
+- `data/toy_boundary_error.csv`:
+  - Toy boundary bank size vs sup-norm error (`N_boundary_points`, `sup_norm_boundary_error`).
+  - Used by `code/generate_figures.py` for `fig_vgray_vs_N.png`.
+
+Both scripts resolve paths from repository structure (no hard-coded absolute paths required).
+
+## Outputs
+
+Generated artifacts are written to `figures/` (created automatically if absent):
+
+- `figures/fig_dcrit_vs_q.png`
+- `figures/fig_vgray_vs_tau.png`
+- `figures/fig_vgray_vs_N.png`
+- `figures/mercury_perihelion.txt`
+
+## Scholarly Description
+
+*General Epistemic Geometry* proposes a geometric framework for scientific knowledge under finite resources.  
+Its core claim is that the syntax-semantics gap is measurable and certifiable as geometry.
+
+Key concepts retained from the monograph:
+
+1. Continuous Geometric CNF semantics through forbidden regions.
+2. Geometric compilation mechanisms (`AddBox` / `AddCube`) with resource tracking.
+3. Epistemic curvature as an invariant:
 
 $$
 \kappa(o) = \inf_{s \in \mathcal{S}_o} \mathrm{Err}(s,o)
 $$
 
-Interpretation:
-
-* $\kappa = 0$: exact representation achievable
-* $\kappa > 0$: irreducible distortion (structural obstruction)
-
-This converts incompleteness into geometry.
-
-### 4. DRP (Derivational Refinement Principle)
-
-A refinement principle ensuring that representational sequences converge optimally along semantic fibers, guaranteeing realizability of the infimum when curvature vanishes.
-
-### 5. Complexity–Geometry Bridge
-
-Hardness results (e.g., DSOP exact minimization) are reinterpreted as positive curvature in the epistemic metric space. Exponential fragmentation becomes geometric obstruction.
-
-$$
-\text{Exponential DSOP} \implies \kappa > 0
-$$
-
-### 6. Differential Lifting & Sobolev Regularity
-
-For PDE-governed domains (e.g., General Relativity), certification requires Sobolev regularity $s > 5/2$. The expansion functional for trapped surfaces is proven continuous under this topology, enabling:
-
-* Certified trapped-surface detection
-* Explicit gray zones as open-interface regions
-
-### 7. Certified Gray Zones
-
-When decision boundaries are non-open (e.g., exact null expansion), strict margins induce a structured interface:
+4. DRP (Derivational Refinement Principle) for convergence and realizability.
+5. Complexity-theoretic obstructions interpreted as positive geometric curvature.
+6. Differential lifting and Sobolev-regular certification in PDE-governed settings.
+7. Operationally certified gray zones:
 
 $$
 \mathcal{G} = \Theta \setminus (\mathcal{A} \cup \mathcal{N})
 $$
 
-Gray zones are not failures; they are operationally inevitable under finite probes.
+8. Topological robustness (braids, knots, configuration spaces).
+9. Coherent flow of theories under invariant-preserving extension.
 
-### 8. Topological Robustness
+Editorial principle:
 
-Uniform separation ensures stability of braid classes and knot types under perturbations. Finite probe systems exist for polygonal knots.
+> Always extend, never reduce.
 
-### 9. Coherent Flow of Theories
+## How to Cite
 
-Knowledge evolution is modeled as a flow respecting invariants and preserving certified regions under extension.
+For February 2026 references, cite the canonical root PDFs.
 
----
+- Primary canonical monograph: `General_Epistemic_Geometry_Book.pdf`
+- Companion closure paper: `Epistemic_Geometry_of_Closure - Riveros.pdf`
 
-## Structure of the Monograph
+Minimal BibTeX:
 
-* **Ch. 1–3:** Continuous semantics and forbidden-region geometry
-* **Ch. 4–6:** Compilation mechanisms and complexity barriers
-* **Ch. 7:** Differential lifting and black hole layer
-* **Ch. 8–9:** Epistemic curvature and DRP
-* **Ch. 10–14:** Operational metrics and Procrustes bridge
-* **Ch. 15–18:** Unified obstruction triad
-* **Ch. 19–20:** Topological extensions (braids, knots)
-* **Appendices:** Invariants, technical lemmas, reference framework
+```bibtex
+@misc{riveros2026geg,
+  author       = {Riveros, Oscar},
+  title        = {General Epistemic Geometry},
+  year         = {2026},
+  month        = feb,
+  note         = {Canonical Final Edition},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/General_Epistemic_Geometry_Book.pdf}}
+}
 
----
-
-## Editorial Standards
-
-The work explicitly distinguishes claims using tags:
-
-* **[Proved]** — fully demonstrated
-* **[Model]** — formal model with assumptions stated
-* **[Speculative]** — programmatic or conjectural extension
-
-The guiding principle is:
-
-> **Always extend, never reduce.**
-
-Each new layer preserves previously certified invariants.
-
----
-
-## Relation to Earlier Drafts
-
-This edition is the **canonical version**. Earlier drafts should be understood as developmental stages. No core results were removed; the final version strengthens:
-
-* Sobolev continuity in the black hole layer
-* DRP formal necessity
-* Operational auditability of Procrustes alignment
-* Topological robustness proofs
-* Bibliographic completeness
-
----
-
-## Intended Audience
-
-This text is aimed at researchers in:
-
-* Foundations of logic
-* Computational complexity
-* Knowledge compilation
-* Mathematical physics
-* Formal verification
-* Topology and geometric analysis
-
-It assumes fluency in at least two of these domains.
-
----
-
-## Why This Matters
-
-Scientific knowledge is typically treated syntactically (proof theory) or empirically (data fitting). This work proposes a third axis:
-
-**Geometric auditability under finite resources.**
-
-It reframes:
-
-* Incompleteness as curvature
-* Hardness as geometric obstruction
-* Approximation as certified interface
-* Scientific progress as coherent geometric flow
-
-## Epistemic Geometry of Closure
-
-**Epistemic Geometry of Closure (SCE-IM, Coherent Flow, Stability, and Operational Completeness)** is a mathematical framework that models knowledge as a **geometric structure** generated by attempts at resolution under limited resources.
-
-Instead of asking only whether a problem has a solution, it studies:
-
----
-
-### **SCE-IM (Structured Closure Engine - Iterative Mechanism):**
-
-A formal scheme in which agents produce states $\sigma$ that approximate a target $o$, measuring the error $\mathrm{err}(\sigma, o)$ under a resource function $\rho$.
-
-The key quantity is **resource-bounded curvature**:
-$$
-\kappa_R(o) = \inf \{ \mathrm{err}(\sigma, o) : \rho(\sigma) \le R \}.
-$$
-This describes how "closable" a target is under budget $R$.
-
----
-
-### **Coherent Flow:**
-
-The continuous or discrete dynamics through which states evolve by reducing error in a structured way, while maintaining the internal consistency of the system.
-
----
-
-### **Stability:**
-
-A property ensuring that small perturbations in the model, representation, or metrics produce controlled changes in $\kappa_R$. This makes the framework robust under reparameterizations or translations between systems.
-
----
-
-### **Operational Completeness:**
-
-When the system possesses sufficient operations to approximate any target within the considered space, it is a functional notion of "expressive capacity."
-
----
-
-## Relation to *General Epistemic Geometry*
-
-*General Epistemic Geometry* is the foundational framework: it defines epistemic spaces, error metrics, transformations, and general structural principles.
-
-**Epistemic Geometry of Closure** is an operational specialization of that framework:
-
-* It introduces explicit resource constraints.
-* It formalizes iterative dynamics (SCE-IM).
-* It analyzes phases, stability, and practical limits of closure.
-
-In summary:
-
-> **General Epistemic Geometry** provides the abstract theory of the space of knowledge.
-> **Epistemic Geometry of Closure** studies how that space behaves when we attempt to close real problems under finite resources.
-
-
----
-
-## Final Note
-
-This is a foundational construction. It does not claim closure of the program; it establishes the architecture.
-
-The geometry is now explicit.
-
----
+@misc{riveros2026closure,
+  author       = {Riveros, Oscar},
+  title        = {Epistemic Geometry of Closure},
+  year         = {2026},
+  month        = feb,
+  note         = {SCE-IM, Coherent Flow, Stability, and Operational Completeness},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Epistemic_Geometry_of_Closure%20-%20Riveros.pdf}}
+}
+```
 
 ## License
 
-Unless otherwise specified in individual files:
-
-**All rights reserved.**
-
-The author explicitly permits reading, discussion, and critique.
-
+Unless otherwise specified in individual files: **All rights reserved.**
