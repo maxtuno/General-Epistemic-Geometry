@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the canonical February 2026 PDFs."
+title: "General Epistemic Geometry"
+version: "February 2026"
+type: software
+authors:
+  - family-names: Riveros
+    given-names: Oscar
+repository-code: "https://github.com/maxtuno/General-Epistemic-Geometry"
+url: "https://github.com/maxtuno/General-Epistemic-Geometry"
+license: "All rights reserved"
