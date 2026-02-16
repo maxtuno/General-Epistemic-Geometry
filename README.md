@@ -44,7 +44,7 @@ This manuscript formalizes SCE-IM closure through three compatible layers: seman
 
 ### `Epistemic_Closure_Net - Riveros.pdf`
 
-This work unifies SCE-IM closure with the Notas Perdurables kernel in a typed, expansive network formalism. Nodes and morphisms encode syntax, semantics, certificates, resources, refinements, and experimental harnesses under explicit compatibility constraints. Claims are evidence-typed, non-closures are isolated as explicit conjectures, and experimental nodes are specified with auditable estimators, uncertainty contracts, and pre-registered falsification patterns.
+This work unifies SCE-IM closure with a closed epistemic kernel in a typed, expansive network formalism. The kernel layer integrates internal certification, theory atlases, holonomy obstructions, and meta-closure towers. Nodes and morphisms encode syntax, semantics, certificates, resources, refinements, and experimental harnesses under explicit compatibility constraints. Claims are evidence-typed (`[Proved]`, `[Model]`, `[Conjecture]`), non-closures are isolated as explicit conjectures, and experimental nodes are specified with auditable estimators, uncertainty quantification, and pre-registered falsification patterns.
 
 ## Repository Layout
 
