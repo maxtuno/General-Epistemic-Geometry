@@ -46,6 +46,20 @@ This manuscript formalizes SCE-IM closure through three compatible layers: seman
 
 This work unifies SCE-IM closure with a closed epistemic kernel in a typed, expansive network formalism. The kernel layer integrates internal certification, theory atlases, holonomy obstructions, and meta-closure towers. Nodes and morphisms encode syntax, semantics, certificates, resources, refinements, and experimental harnesses under explicit compatibility constraints. Claims are evidence-typed (`[Proved]`, `[Model]`, `[Conjecture]`), non-closures are isolated as explicit conjectures, and experimental nodes are specified with auditable estimators, uncertainty quantification, and pre-registered falsification patterns.
 
+### `Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf`
+
+Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions extends the repository with a technical companion paper centered on observer-state geometry, exact semantic identity, agreement radii, protocol holonomy, finite-bank agreement certification, and spectral obstructions.
+
+Key contributions:
+
+  - Observer-state fibers and exact semantic identity under separating query families.
+  - Agreement radius as a local semantic stability scale, together with a no-compressibility barrier under semantically lossless compression.
+  - Protocol-category semantics with abstract holonomy, realized residues, and ball-framed path modulus.
+  - Finite-bank agreement modulus with transfer to idealized certification regimes.
+  - Order induced by non-closure through a multi-component obstruction vector.
+  - An explicit binary model exhibiting nontrivial commutator residue and a finite agreement window.
+  - A conditional Yang--Mills reduction in which mass gap is recast as a spectral persistence problem for UV/IR closure obstructions.
+
 ## Repository Layout
 
 This repository keeps canonical PDFs in the repository root and reproducible scripts/data in dedicated folders.
@@ -236,6 +250,15 @@ Minimal BibTeX:
   month        = feb,
   note         = {Canonical root PDF},
   howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Epistemic_Closure_Net%20-%20Riveros.pdf}}
+}
+
+@misc{riveros2026observergeometry,
+  author       = {Riveros, Oscar},
+  title        = {Physical Observer Geometry, Protocol_Holonomy, Order by Non-Closure and Spectral Obstructions},
+  year         = {2026},
+  month        = mar,
+  note         = {Canonical root PDF},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf.pdf}}
 }
 ```
 
