@@ -9,6 +9,7 @@ Foundational research monograph and companion papers by **Oscar Riveros**.
 - Finite-Bank certification paper (root): [Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf](<./Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf>)
 - Epistemic Geometry of Closure PDF (root): [Epistemic_Geometry_of_Closure - Riveros.pdf](<./Epistemic_Geometry_of_Closure - Riveros.pdf>)
 - Epistemic Closure Net PDF (root): [Epistemic_Closure_Net - Riveros.pdf](<./Epistemic_Closure_Net - Riveros.pdf>)
+- Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions PDF (root): [Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf](<./Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf>)
 - Foundational Papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
 - Academia pages:
   - [General Epistemic Geometry](https://www.academia.edu/164594131/General_Epistemic_Geometry)
@@ -258,7 +259,7 @@ Minimal BibTeX:
   year         = {2026},
   month        = mar,
   note         = {Canonical root PDF},
-  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf.pdf}}
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf}}
 }
 ```
 
