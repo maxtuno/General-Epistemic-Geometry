@@ -10,8 +10,8 @@ Foundational research monograph and companion papers by **Oscar Riveros**.
 - Epistemic Geometry of Closure PDF (root): [Epistemic_Geometry_of_Closure - Riveros.pdf](<./Epistemic_Geometry_of_Closure - Riveros.pdf>)
 - Epistemic Closure Net PDF (root): [Epistemic_Closure_Net - Riveros.pdf](<./Epistemic_Closure_Net - Riveros.pdf>)
 - Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure, and Spectral Obstructions PDF (root): [Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf](<./Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf>)
-- Foundational Papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
 - A Diagrammatic Language for Epistemic Geometry (root): [egdl_epistemic_geometry - Riveros](<./egdl_epistemic_geometry - Riveros.pdf>)
+- Foundational Papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
 - Academia pages:
   - [General Epistemic Geometry](https://www.academia.edu/164594131/General_Epistemic_Geometry)
   - [Epistemic Geometry of Closure](https://www.academia.edu/164640745/Epistemic_Geometry_of_Closure_SCE_IM_Coherent_Flow_Stability_and_Operational_Completeness)
@@ -83,6 +83,7 @@ This repository keeps canonical PDFs in the repository root and reproducible scr
 |-- Epistemic_Geometry_of_Closure - Riveros.pdf
 |-- Epistemic_Closure_Net - Riveros.pdf
 |-- Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf
+|-- A Diagrammatic Language for Epistemic Geometry - Riveros.pdf
 `-- README.md
 ```
 
