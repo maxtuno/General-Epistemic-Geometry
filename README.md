@@ -81,6 +81,7 @@ This repository keeps canonical PDFs in the repository root and reproducible scr
 |-- Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf
 |-- Epistemic_Geometry_of_Closure - Riveros.pdf
 |-- Epistemic_Closure_Net - Riveros.pdf
+|-- Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf
 `-- README.md
 ```
 
@@ -255,7 +256,7 @@ Minimal BibTeX:
 
 @misc{riveros2026observergeometry,
   author       = {Riveros, Oscar},
-  title        = {Physical Observer Geometry, Protocol_Holonomy, Order by Non-Closure and Spectral Obstructions},
+  title        = {Physical Observer Geometry, Protocol Holonomy, Order by Non-Closure and Spectral Obstructions},
   year         = {2026},
   month        = mar,
   note         = {Canonical root PDF},
