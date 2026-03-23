@@ -8,7 +8,7 @@ This repository serves two complementary purposes:
 2. It provides the reproducible computational bundle for the scripts, data tables, and generated figures associated with the repository's quantitative artifacts.
 
 Core canonical edition: **February 2026**.
-Repository extensions included here: **March 2026 companion documents**, including [`Fisica-Riveriana.pdf`](./Fisica-Riveriana.pdf).
+Repository extensions included here: **March 2026 companion documents**, including [`Fisica-Riveriana.pdf`](./Fisica-Riveriana.pdf) and [`Autorreferencia Segura - Riveros.pdf`](<./Autorreferencia Segura - Riveros.pdf>).
 
 ## Quick Links
 
@@ -19,6 +19,7 @@ Repository extensions included here: **March 2026 companion documents**, includi
 - Observer geometry and holonomy paper: [Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf](<./Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf>)
 - Diagrammatic language paper: [egdl_epistemic_geometry - Riveros.pdf](<./egdl_epistemic_geometry - Riveros.pdf>)
 - *Fisica Riveriana* treatise (Spanish): [Fisica-Riveriana.pdf](./Fisica-Riveriana.pdf)
+- Safe self-reference paper (Spanish): [Autorreferencia Segura - Riveros.pdf](<./Autorreferencia Segura - Riveros.pdf>)
 - Citation metadata: [CITATION.cff](./CITATION.cff)
 - Supplementary artifacts note: [artifact/README.md](./artifact/README.md)
 - Foundational papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
@@ -43,7 +44,7 @@ Repository extensions included here: **March 2026 companion documents**, includi
 
 This repository is not only a document archive. Its structure is intentionally split between canonical scholarship and reproducible support material.
 
-- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, and the later *Fisica Riveriana* synthesis.
+- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, and the safe-self-reference extension for dynamic state families.
 - [`code/`](./code) contains the scripts used to regenerate the repository's computational figures and benchmark text output.
 - [`data/`](./data) contains the CSV inputs consumed by the reproducibility scripts.
 - [`figures/`](./figures) is the output directory for regenerated figures and benchmark files; it is tracked with a placeholder so the path exists in a clean checkout.
@@ -82,6 +83,10 @@ This companion paper develops a categorical and probabilistic formalism for obse
 
 *Fisica Riveriana* is a Spanish-language extension that fuses the operator, variational, and spectral line with the phenomenological, inferential, and multichannel line into a single architecture. It pushes the framework into renormalization, interface scattering, anomalies, non-equilibrium dynamics, fermionic localization, phase cosmology, finite-bank certification, and precision falsification protocols. In the language of the text itself, the treatise is built around a double closure: partial mathematical closure and partial phenomenological closure under finite resources.
 
+### `Autorreferencia Segura - Riveros.pdf`
+
+*Autorreferencia segura en familias dinámicas de estados* is a Spanish-language March 2026 companion paper on safe self-reference in time-varying state spaces. It introduces an effective load `L_eff` that combines self-reference speed and constitutive drift against an integration capacity `Gamma`, and proves local critical velocities, a uniformity theorem for class-wide safe bounds, reachable-divergence criteria, invariance of moving safe tubes through Lyapunov-ISS control across fibers, no-return horizons, and finite-radius bounds under minimal protocol holonomy.
+
 ## Repository Layout
 
 ```text
@@ -98,6 +103,7 @@ This companion paper develops a categorical and probabilistic formalism for obse
 |-- figures/
 |   `-- .gitkeep
 |-- CITATION.cff
+|-- Autorreferencia Segura - Riveros.pdf
 |-- Epistemic_Closure_Net - Riveros.pdf
 |-- Epistemic_Geometry_of_Closure - Riveros.pdf
 |-- Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf
@@ -212,7 +218,8 @@ Its recurrent structural themes are:
 3. epistemic curvature as a measurable gap between syntactic constructions and semantic targets;
 4. closure, gray zones, and finite-bank transfer as operational notions of partial certification;
 5. atlas, protocol, and observer geometry as higher-order sources of obstruction and holonomy;
-6. physical and phenomenological extensions in which interface structure, spectrum, fermionic localization, and multichannel inference become part of one continuous research architecture.
+6. safe self-reference, viability horizons, and moving safe tubes in dynamically varying state families;
+7. physical and phenomenological extensions in which interface structure, spectrum, fermionic localization, and multichannel inference become part of one continuous research architecture.
 
 Editorial principle retained across the corpus:
 
@@ -231,6 +238,7 @@ Primary canonical references in this repository:
 - `Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf`
 - `egdl_epistemic_geometry - Riveros.pdf`
 - `Fisica-Riveriana.pdf`
+- `Autorreferencia Segura - Riveros.pdf`
 
 Minimal BibTeX:
 
@@ -289,6 +297,14 @@ Minimal BibTeX:
   year         = {2026},
   note         = {Canonical root PDF; Spanish-language extension dated March 20, 2026},
   howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Fisica-Riveriana.pdf}}
+}
+
+@misc{riveros2026autorreferenciasegura,
+  author       = {Riveros, Oscar},
+  title        = {Autorreferencia segura en familias dinámicas de estados},
+  year         = {2026},
+  note         = {Canonical root PDF; Spanish-language companion dated March 2026},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Autorreferencia%20Segura%20-%20Riveros.pdf}}
 }
 ```
 
