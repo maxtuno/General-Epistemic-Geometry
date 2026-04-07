@@ -20,6 +20,7 @@ Repository extensions included here: **March 2026 companion documents**, includi
 - Diagrammatic language paper: [egdl_epistemic_geometry - Riveros.pdf](<./egdl_epistemic_geometry - Riveros.pdf>)
 - *Fisica Riveriana* treatise (Spanish): [Fisica-Riveriana.pdf](./Fisica-Riveriana.pdf)
 - Safe self-reference paper (Spanish): [Autorreferencia Segura - Riveros.pdf](<./Autorreferencia Segura - Riveros.pdf>)
+- TCOC formalization paper (Spanish): [tcoc - Riveros.pdf](<./tcoc - Riveros.pdf>)
 - Citation metadata: [CITATION.cff](./CITATION.cff)
 - Supplementary artifacts note: [artifact/README.md](./artifact/README.md)
 - Foundational papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
@@ -44,7 +45,7 @@ Repository extensions included here: **March 2026 companion documents**, includi
 
 This repository is not only a document archive. Its structure is intentionally split between canonical scholarship and reproducible support material.
 
-- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, and the safe-self-reference extension for dynamic state families.
+- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, the safe-self-reference extension for dynamic state families, and the TCOC formalization manuscript on exact optimization-preserving representations and complexity transport.
 - [`code/`](./code) contains the scripts used to regenerate the repository's computational figures and benchmark text output.
 - [`data/`](./data) contains the CSV inputs consumed by the reproducibility scripts.
 - [`figures/`](./figures) is the output directory for regenerated figures and benchmark files; it is tracked with a placeholder so the path exists in a clean checkout.
@@ -87,6 +88,10 @@ This companion paper develops a categorical and probabilistic formalism for obse
 
 *Autorreferencia segura en familias dinámicas de estados* is a Spanish-language March 2026 companion paper on safe self-reference in time-varying state spaces. It introduces an effective load `L_eff` that combines self-reference speed and constitutive drift against an integration capacity `Gamma`, and proves local critical velocities, a uniformity theorem for class-wide safe bounds, reachable-divergence criteria, invariance of moving safe tubes through Lyapunov-ISS control across fibers, no-return horizons, and finite-radius bounds under minimal protocol holonomy.
 
+### `tcoc - Riveros.pdf`
+
+*Teoría de Conservación de Óptimos y Complejidad* is the Spanish-language formal TCOC manuscript treated in this repository as a canonical root paper. It axiomatizes exact optimization-preserving representations, correct optimal support, strong exactness, affine equivalence, typed transport between representations, linear existence criteria, and formal obstruction principles for representation-based complexity transfer. Its final sections isolate sufficient conditions under which a polynomial optimization bridge on the relaxed side would transfer to the original combinatorial family, yielding a clean internal scheme toward a `P = NP` consequence when coupled to an NP-complete decision companion.
+
 ## Repository Layout
 
 ```text
@@ -112,6 +117,7 @@ This companion paper develops a categorical and probabilistic formalism for obse
 |-- LICENSE.md
 |-- Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf
 |-- egdl_epistemic_geometry - Riveros.pdf
+|-- tcoc - Riveros.pdf
 `-- README.md
 ```
 
@@ -220,6 +226,7 @@ Its recurrent structural themes are:
 5. atlas, protocol, and observer geometry as higher-order sources of obstruction and holonomy;
 6. safe self-reference, viability horizons, and moving safe tubes in dynamically varying state families;
 7. physical and phenomenological extensions in which interface structure, spectrum, fermionic localization, and multichannel inference become part of one continuous research architecture.
+8. exact optimization-preserving representations and typed complexity transport, culminating in the TCOC formalization of when relaxation-side polynomial solvability can and cannot be transferred back to the original discrete family.
 
 Editorial principle retained across the corpus:
 
@@ -239,6 +246,7 @@ Primary canonical references in this repository:
 - `egdl_epistemic_geometry - Riveros.pdf`
 - `Fisica-Riveriana.pdf`
 - `Autorreferencia Segura - Riveros.pdf`
+- `tcoc - Riveros.pdf`
 
 Minimal BibTeX:
 
@@ -305,6 +313,15 @@ Minimal BibTeX:
   year         = {2026},
   note         = {Canonical root PDF; Spanish-language companion dated March 2026},
   howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Autorreferencia%20Segura%20-%20Riveros.pdf}}
+}
+
+
+@misc{riveros2026tcoc,
+  author       = {Riveros, Oscar},
+  title        = {Teoría de Conservación de Óptimos y Complejidad},
+  year         = {2026},
+  note         = {Canonical root PDF; Spanish-language formalization of TCOC},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/tcoc%20-%20Riveros.pdf}}
 }
 ```
 
