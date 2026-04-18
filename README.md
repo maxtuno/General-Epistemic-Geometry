@@ -8,7 +8,7 @@ This repository serves two complementary purposes:
 2. It provides the reproducible computational bundle for the scripts, data tables, and generated figures associated with the repository's quantitative artifacts.
 
 Core canonical edition: **February 2026**.
-Repository extensions included here: **March 2026 companion documents**, including [`Fisica-Riveriana.pdf`](./Fisica-Riveriana.pdf) and [`Autorreferencia Segura - Riveros.pdf`](<./Autorreferencia Segura - Riveros.pdf>).
+Repository extensions included here: companion documents and root manuscripts, including [`Fisica-Riveriana.pdf`](./Fisica-Riveriana.pdf), [`Autorreferencia Segura - Riveros.pdf`](<./Autorreferencia Segura - Riveros.pdf>), and [`Meta-Algoritmos - Riveros.pdf`](<./Meta-Algoritmos - Riveros.pdf>).
 
 ## Quick Links
 
@@ -20,6 +20,7 @@ Repository extensions included here: **March 2026 companion documents**, includi
 - Diagrammatic language paper: [egdl_epistemic_geometry - Riveros.pdf](<./egdl_epistemic_geometry - Riveros.pdf>)
 - *Fisica Riveriana* treatise (Spanish): [Fisica-Riveriana.pdf](./Fisica-Riveriana.pdf)
 - Safe self-reference paper (Spanish): [Autorreferencia Segura - Riveros.pdf](<./Autorreferencia Segura - Riveros.pdf>)
+- Meta-algorithms formalization paper (Spanish): [Meta-Algoritmos - Riveros.pdf](<./Meta-Algoritmos - Riveros.pdf>)
 - TCOC formalization paper (Spanish): [tcoc - Riveros.pdf](<./tcoc - Riveros.pdf>)
 - Citation metadata: [CITATION.cff](./CITATION.cff)
 - Supplementary artifacts note: [artifact/README.md](./artifact/README.md)
@@ -45,7 +46,7 @@ Repository extensions included here: **March 2026 companion documents**, includi
 
 This repository is not only a document archive. Its structure is intentionally split between canonical scholarship and reproducible support material.
 
-- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, the safe-self-reference extension for dynamic state families, and the TCOC formalization manuscript on exact optimization-preserving representations and complexity transport.
+- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, the safe-self-reference extension for dynamic state families, the meta-algorithmic manuscript on executable recursive branching, hierarchical compilation, and protocol-indexed hardness, and the TCOC formalization manuscript on exact optimization-preserving representations and complexity transport.
 - [`code/`](./code) contains the scripts used to regenerate the repository's computational figures and benchmark text output.
 - [`data/`](./data) contains the CSV inputs consumed by the reproducibility scripts.
 - [`figures/`](./figures) is the output directory for regenerated figures and benchmark files; it is tracked with a placeholder so the path exists in a clean checkout.
@@ -88,6 +89,10 @@ This companion paper develops a categorical and probabilistic formalism for obse
 
 *Autorreferencia segura en familias dinámicas de estados* is a Spanish-language March 2026 companion paper on safe self-reference in time-varying state spaces. It introduces an effective load `L_eff` that combines self-reference speed and constitutive drift against an integration capacity `Gamma`, and proves local critical velocities, a uniformity theorem for class-wide safe bounds, reachable-divergence criteria, invariance of moving safe tubes through Lyapunov-ISS control across fibers, no-return horizons, and finite-radius bounds under minimal protocol holonomy.
 
+### `Meta-Algoritmos - Riveros.pdf`
+
+*Meta-Algoritmos* is a Spanish-language formal manuscript on executable meta-algorithms, certified branching, hierarchical compilation, and complexity transport across levels. It develops a rigorous core with existence/uniqueness and global-correctness results for detector-guided recursive procedures, distinguishes pointwise from uniform hierarchical complexity, and then adds a compatible protocol-process extension in which hardness is indexed by regime, agency, and protocol rather than treated as absolute.
+
 ### `tcoc - Riveros.pdf`
 
 *Teoría de Conservación de Óptimos y Complejidad* is the Spanish-language formal TCOC manuscript treated in this repository as a canonical root paper. It axiomatizes exact optimization-preserving representations, correct optimal support, strong exactness, affine equivalence, typed transport between representations, linear existence criteria, and formal obstruction principles for representation-based complexity transfer. Its final sections isolate sufficient conditions under which a polynomial optimization bridge on the relaxed side would transfer to the original combinatorial family, yielding a clean internal scheme toward a `P = NP` consequence when coupled to an NP-complete decision companion.
@@ -115,11 +120,12 @@ This companion paper develops a categorical and probabilistic formalism for obse
 |-- Fisica-Riveriana.pdf
 |-- General_Epistemic_Geometry_Book.pdf
 |-- LICENSE.md
+|-- Meta-Algoritmos - Riveros.pdf
 |-- Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf
 |-- egdl_epistemic_geometry - Riveros.pdf
 |-- tcoc - Riveros.pdf
 `-- README.md
-```
+````
 
 ## Reproduce the Computational Artifacts
 
@@ -127,9 +133,9 @@ Run from the repository root. A recent Python 3 environment is recommended.
 
 Dependencies listed in [`code/requirements.txt`](./code/requirements.txt):
 
-- `numpy`
-- `pandas`
-- `matplotlib`
+* `numpy`
+* `pandas`
+* `matplotlib`
 
 ### Linux / macOS
 
@@ -157,14 +163,14 @@ python code/mercury_perihelion.py --out-dir figures
 
 Reads the CSV inputs in [`data/`](./data), regenerates the repository's figure set, and writes PNG outputs to [`figures/`](./figures).
 
-- `--data-dir`: directory containing the repository CSV inputs
-- `--input`: optional explicit main CSV path; defaults to `data/jaramillo_lousto_table1.csv`
-- `--boundary-error`: optional explicit boundary-error CSV path; defaults to `data/toy_boundary_error.csv`
-- `--out-dir`: output directory for generated figures
-- `--seed`: random seed for the toy Monte Carlo model
-- `--mc`: number of Monte Carlo samples used in the gray-zone estimate
-- `--data`: legacy alias for the main CSV path
-- `--outdir`: legacy alias for the output directory
+* `--data-dir`: directory containing the repository CSV inputs
+* `--input`: optional explicit main CSV path; defaults to `data/jaramillo_lousto_table1.csv`
+* `--boundary-error`: optional explicit boundary-error CSV path; defaults to `data/toy_boundary_error.csv`
+* `--out-dir`: output directory for generated figures
+* `--seed`: random seed for the toy Monte Carlo model
+* `--mc`: number of Monte Carlo samples used in the gray-zone estimate
+* `--data`: legacy alias for the main CSV path
+* `--outdir`: legacy alias for the output directory
 
 Example:
 
@@ -176,9 +182,9 @@ python code/generate_figures.py --data-dir data --out-dir figures --seed 0
 
 Computes a deterministic GR perihelion-precession benchmark for Mercury and writes a text artifact to [`figures/`](./figures).
 
-- `--out-dir`: directory where `mercury_perihelion.txt` is written
-- `--output`: optional explicit output path
-- `--seed`: accepted for CLI consistency; not used in the calculation
+* `--out-dir`: directory where `mercury_perihelion.txt` is written
+* `--output`: optional explicit output path
+* `--seed`: accepted for CLI consistency; not used in the calculation
 
 Example:
 
@@ -202,10 +208,10 @@ Both scripts resolve their defaults from repository-relative paths, so no hard-c
 
 When the reproducibility scripts are executed, the following artifacts are written to [`figures/`](./figures):
 
-- `figures/fig_dcrit_vs_q.png`
-- `figures/fig_vgray_vs_tau.png`
-- `figures/fig_vgray_vs_N.png`
-- `figures/mercury_perihelion.txt`
+* `figures/fig_dcrit_vs_q.png`
+* `figures/fig_vgray_vs_tau.png`
+* `figures/fig_vgray_vs_N.png`
+* `figures/mercury_perihelion.txt`
 
 These outputs are the repository's reproducible computational companions to the closure-net / finite-bank materials.
 
@@ -225,8 +231,9 @@ Its recurrent structural themes are:
 4. closure, gray zones, and finite-bank transfer as operational notions of partial certification;
 5. atlas, protocol, and observer geometry as higher-order sources of obstruction and holonomy;
 6. safe self-reference, viability horizons, and moving safe tubes in dynamically varying state families;
-7. physical and phenomenological extensions in which interface structure, spectrum, fermionic localization, and multichannel inference become part of one continuous research architecture.
-8. exact optimization-preserving representations and typed complexity transport, culminating in the TCOC formalization of when relaxation-side polynomial solvability can and cannot be transferred back to the original discrete family.
+7. physical and phenomenological extensions in which interface structure, spectrum, fermionic localization, and multichannel inference become part of one continuous research architecture;
+8. exact optimization-preserving representations and typed complexity transport, culminating in the TCOC formalization of when relaxation-side polynomial solvability can and cannot be transferred back to the original discrete family;
+9. executable meta-algorithms, certified branching, hierarchical compilation by levels, and regime/protocol-indexed hardness in recursive problem solving.
 
 Editorial principle retained across the corpus:
 
@@ -238,15 +245,16 @@ For repository-level citation, use [`CITATION.cff`](./CITATION.cff). For documen
 
 Primary canonical references in this repository:
 
-- `General_Epistemic_Geometry_Book.pdf`
-- `Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf`
-- `Epistemic_Geometry_of_Closure - Riveros.pdf`
-- `Epistemic_Closure_Net - Riveros.pdf`
-- `Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf`
-- `egdl_epistemic_geometry - Riveros.pdf`
-- `Fisica-Riveriana.pdf`
-- `Autorreferencia Segura - Riveros.pdf`
-- `tcoc - Riveros.pdf`
+* `General_Epistemic_Geometry_Book.pdf`
+* `Finite-Bank_Certification_in_Epistemic_Geometry - Riveros.pdf`
+* `Epistemic_Geometry_of_Closure - Riveros.pdf`
+* `Epistemic_Closure_Net - Riveros.pdf`
+* `Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf`
+* `egdl_epistemic_geometry - Riveros.pdf`
+* `Fisica-Riveriana.pdf`
+* `Autorreferencia Segura - Riveros.pdf`
+* `Meta-Algoritmos - Riveros.pdf`
+* `tcoc - Riveros.pdf`
 
 Minimal BibTeX:
 
@@ -315,6 +323,13 @@ Minimal BibTeX:
   howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Autorreferencia%20Segura%20-%20Riveros.pdf}}
 }
 
+@misc{riveros2026metaalgoritmos,
+  author       = {Riveros, Oscar},
+  title        = {Meta-Algoritmos},
+  year         = {2026},
+  note         = {Canonical root PDF; Spanish-language formalization of executable meta-algorithms, certified branching, hierarchical compilation, and protocol-indexed hardness},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/Meta-Algoritmos%20-%20Riveros.pdf}}
+}
 
 @misc{riveros2026tcoc,
   author       = {Riveros, Oscar},
