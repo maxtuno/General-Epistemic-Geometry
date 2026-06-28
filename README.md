@@ -130,6 +130,7 @@ This paper formalizes the generalized SAT equation within the epistemic geometry
 |-- egdl_epistemic_geometry - Riveros.pdf
 |-- tcoc - Riveros.pdf
 |-- sat-equation-generalized.pdf
+|-- the_sat_equation.py
 `-- README.md
 ````
 
@@ -196,6 +197,14 @@ Example:
 
 ```bash
 python code/mercury_perihelion.py --out-dir figures
+```
+
+### `python the_sat_equation.py`
+
+Standalone companion script for the [generalized SAT equation paper](./sat-equation-generalized.pdf). It implements the original SAT equation for balanced CNF formulas and the generalized SAT equation for arbitrary CNF formulas (including clauses with missing variables). Running the script prints SAT equation numbers, their binary expansions, and validation truth tables for several example CNFs, including non-balanced cases.
+
+```bash
+python the_sat_equation.py
 ```
 
 ## Data Assets
