@@ -22,6 +22,7 @@ Repository extensions included here: companion documents and root manuscripts, i
 - Safe self-reference paper (Spanish): [Autorreferencia Segura - Riveros.pdf](<./Autorreferencia Segura - Riveros.pdf>)
 - Meta-algorithms formalization paper (Spanish): [Meta-Algoritmos - Riveros.pdf](<./Meta-Algoritmos - Riveros.pdf>)
 - TCOC formalization paper (Spanish): [tcoc - Riveros.pdf](<./tcoc - Riveros.pdf>)
+- Generalized SAT equation paper: [sat-equation-generalized.pdf](./sat-equation-generalized.pdf)
 - Citation metadata: [CITATION.cff](./CITATION.cff)
 - Supplementary artifacts note: [artifact/README.md](./artifact/README.md)
 - Foundational papers repository: [maxtuno/EPISTEMIC-GEOMETRY](https://github.com/maxtuno/EPISTEMIC-GEOMETRY)
@@ -46,7 +47,7 @@ Repository extensions included here: companion documents and root manuscripts, i
 
 This repository is not only a document archive. Its structure is intentionally split between canonical scholarship and reproducible support material.
 
-- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, the safe-self-reference extension for dynamic state families, the meta-algorithmic manuscript on executable recursive branching, hierarchical compilation, and protocol-indexed hardness, and the TCOC formalization manuscript on exact optimization-preserving representations and complexity transport.
+- The repository root stores the canonical PDFs that define the framework, its closure theory, finite-bank certification machinery, observer-geometry extensions, diagrammatic formalism, the later *Fisica Riveriana* synthesis, the safe-self-reference extension for dynamic state families, the meta-algorithmic manuscript on executable recursive branching, hierarchical compilation, and protocol-indexed hardness, the TCOC formalization manuscript on exact optimization-preserving representations and complexity transport, and the generalized SAT equation paper formalizing the satisfiability equation within the epistemic geometry architecture.
 - [`code/`](./code) contains the scripts used to regenerate the repository's computational figures and benchmark text output.
 - [`data/`](./data) contains the CSV inputs consumed by the reproducibility scripts.
 - [`figures/`](./figures) is the output directory for regenerated figures and benchmark files; it is tracked with a placeholder so the path exists in a clean checkout.
@@ -97,6 +98,10 @@ This companion paper develops a categorical and probabilistic formalism for obse
 
 *Teoría de Conservación de Óptimos y Complejidad* is the Spanish-language formal TCOC manuscript treated in this repository as a canonical root paper. It axiomatizes exact optimization-preserving representations, correct optimal support, strong exactness, affine equivalence, typed transport between representations, linear existence criteria, and formal obstruction principles for representation-based complexity transfer. Its final sections isolate sufficient conditions under which a polynomial optimization bridge on the relaxed side would transfer to the original combinatorial family, yielding a clean internal scheme toward a `P = NP` consequence when coupled to an NP-complete decision companion.
 
+### `sat-equation-generalized.pdf`
+
+This paper formalizes the generalized SAT equation within the epistemic geometry framework. It develops a canonical formulation of the satisfiability equation under continuous geometric semantics, linking the combinatorial structure of SAT and #SAT to the measurable syntax-semantics gap, curvature, and closure theory developed across the corpus. The generalized equation serves as a unifying object that connects finite-bank certification, coherent-flow dynamics, and the TCOC representation transport machinery.
+
 ## Repository Layout
 
 ```text
@@ -124,6 +129,7 @@ This companion paper develops a categorical and probabilistic formalism for obse
 |-- Physical_Observer_Geometry__Protocol_Holonomy__Order_by_Non-Closure__and_Spectral_Obstructions - Riveros.pdf
 |-- egdl_epistemic_geometry - Riveros.pdf
 |-- tcoc - Riveros.pdf
+|-- sat-equation-generalized.pdf
 `-- README.md
 ````
 
@@ -233,7 +239,8 @@ Its recurrent structural themes are:
 6. safe self-reference, viability horizons, and moving safe tubes in dynamically varying state families;
 7. physical and phenomenological extensions in which interface structure, spectrum, fermionic localization, and multichannel inference become part of one continuous research architecture;
 8. exact optimization-preserving representations and typed complexity transport, culminating in the TCOC formalization of when relaxation-side polynomial solvability can and cannot be transferred back to the original discrete family;
-9. executable meta-algorithms, certified branching, hierarchical compilation by levels, and regime/protocol-indexed hardness in recursive problem solving.
+9. executable meta-algorithms, certified branching, hierarchical compilation by levels, and regime/protocol-indexed hardness in recursive problem solving;
+10. the generalized SAT equation as a unifying formal object connecting continuous geometric semantics, curvature, closure theory, finite-bank certification, and complexity transport.
 
 Editorial principle retained across the corpus:
 
@@ -255,6 +262,7 @@ Primary canonical references in this repository:
 * `Autorreferencia Segura - Riveros.pdf`
 * `Meta-Algoritmos - Riveros.pdf`
 * `tcoc - Riveros.pdf`
+* `sat-equation-generalized.pdf`
 
 Minimal BibTeX:
 
@@ -337,6 +345,14 @@ Minimal BibTeX:
   year         = {2026},
   note         = {Canonical root PDF; Spanish-language formalization of TCOC},
   howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/tcoc%20-%20Riveros.pdf}}
+}
+
+@misc{riveros2026satequation,
+  author       = {Riveros, Oscar},
+  title        = {Generalized SAT Equation},
+  year         = {2026},
+  note         = {Canonical root PDF; formalization of the generalized satisfiability equation within epistemic geometry},
+  howpublished = {\url{https://github.com/maxtuno/General-Epistemic-Geometry/blob/main/sat-equation-generalized.pdf}}
 }
 ```
 
